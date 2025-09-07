@@ -18,7 +18,7 @@ export function ShoppingListItem({ name, isCompleted }: Props) {
           onPress: () => console.log("Item deleted"),
         },
         { text: "Cancel", style: "cancel" },
-      ]
+      ],
     );
   };
 
@@ -29,9 +29,19 @@ export function ShoppingListItem({ name, isCompleted }: Props) {
         isCompleted ? styles.completedContainer : undefined,
       ]}
     >
-      <Text style={[styles.itemText, isCompleted ? styles.completedItemText : undefined]}>{name}</Text>
+      <Text
+        style={[
+          styles.itemText,
+          isCompleted ? styles.completedItemText : undefined,
+        ]}
+      >
+        {name}
+      </Text>
       <TouchableOpacity
-        style={[styles.button, isCompleted ? styles.completedButton : undefined]}
+        style={[
+          styles.button,
+          isCompleted ? styles.completedButton : undefined,
+        ]}
         onPress={handleDelete}
         activeOpacity={0.8}
       >
